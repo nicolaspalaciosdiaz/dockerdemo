@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Show Form Page
+    </title>
+</head>
+<body>
+<form th:action="@{/api/products/add}" method="POST" th:object="${product}">
+
+    <h1>Add product</h1>
+
+    <label for="pname">Product Name:</label>
+    <br>
+    <input type="text" id="pname" name="productName" placeholder="Name of product?"><br>
+
+    <label for="description">Description:</label>
+    <br>
+    <input type="text" id="description" name="description" placeholder="Some info about the product?"><br>
+
+    <label for="price">Price:</label>
+    <br>
+    <input type="number" id="price" name="price" placeholder="Product price?">
+
+    <input type="submit" value="Add Product"/>
+</form>
+</body>
+</html>

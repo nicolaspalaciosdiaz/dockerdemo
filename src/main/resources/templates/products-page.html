@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+    <title>
+        Products Page
+    </title>
+</head>
+
+<body>
+<h1>Products</h1>
+<div th:if="${products.isEmpty()}">
+    <h2>No products yet!</h2>
+</div>
+<div th:unless="${products.isEmpty()}">
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Products Left</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.description}"></td>
+            <td th:text="${product.productsLeft}"></td>
+            <td th:text="${product.price}"></td>
+            <td>
+                <!-- Edit button -->
+                <!--                <a th:href="@{'/api/products/edit/' + ${product.id}}">Edit</a>-->
+                <a th:href="@{'/api/products/' + ${product.id}}">edit</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<a href="/api/showform">Add a product</a>
+</body>
+</html>

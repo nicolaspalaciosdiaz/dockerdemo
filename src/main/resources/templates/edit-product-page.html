@@ -1,0 +1,54 @@
+<!--<!DOCTYPE HTML>-->
+<!--<html xmlns:th="http://www.thymleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>-->
+<!--        Edit Product Page-->
+<!--    </title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form th:action="@{/api/products/edit/{productId}(productId=${product.id})}"-->
+<!--      th:object="${product}"-->
+<!--      method="post">-->
+<!--    &lt;!&ndash;    <input type="hidden" name="_method" value="put">&ndash;&gt;-->
+<!--    <label for="productName">Name</label>-->
+<!--    <input type="text" th:field="*{productName}" id="productName" placeholder="New Product Name">-->
+<!--    <button type="submit">Update Product</button>-->
+
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product Page</title>
+</head>
+<body>
+<form th:action="@{/api/products/edit/{productId}(productId=${product.id})}"
+      th:object="${product}"
+      method="post">
+    <!-- Include hidden input for method type if using Spring's HiddenHttpMethodFilter -->
+    <input type="hidden" name="_method" value="put">
+    <label for="productName">Name</label>
+    <input type="text" th:field="*{productName}" id="productName" placeholder="New Product Name">
+
+    <input type="hidden" name="_method" value="put">
+    <label for="productsLeft">Products Left</label>
+    <input type="text" th:field="*{productsLeft}" id="productsLeft" placeholder="New Products Left">
+
+    <input type="hidden" name="_method" value="put">
+    <label for="description">description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="New Description">
+
+    <input type="hidden" name="_method" value="put">
+    <label for="price">price</label>
+    <input type="text" th:field="*{price}" id="price" placeholder="New Price">
+
+    <button type="submit">Update Product</button>
+</form>
+</body>
+</html>
+
+
