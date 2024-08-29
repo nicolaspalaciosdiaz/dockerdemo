@@ -1,33 +1,66 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Compiled source files
+*.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven build output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse/IntelliJ IDEA/NetBeans specific files
 .project
-.settings
+.classpath
+.cproject
+.settings/
 .springBeans
 .sts4-cache
-
-### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
+.nb-gradle/
+.nbproject/
+.nbbuild/
+dist/
+nbdist/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code
 .vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific files
+*.springBeans
+spring.log
+
+# Lombok generated files
+.lombok/
+
+# Local environment-specific files
+.env
+*.local
+*.env.local
+*.env.*.local
+.envrc
